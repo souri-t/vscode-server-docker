@@ -21,6 +21,10 @@ RUN echo -e '#!/bin/bash\n\njava -jar /usr/local/bin/plantuml.jar "$@"' > /usr/l
 # code-serverの最新バージョンをインストール
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 
+# 拡張機能のインストール
+RUN code-server --install-extension vscjava.vscode-java-pack && \
+    code-server --install-extension jebbs.plantuml
+    
 # ワークディレクトリを作成
 RUN mkdir -p /home/coder/project
 
