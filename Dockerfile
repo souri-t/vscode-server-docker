@@ -7,8 +7,16 @@ RUN apt-get update && apt-get install -y \
     wget \
     unzip \
     git \
-    openssh-client \
+    graphviz \
+    openjdk-17-jre \
     && apt-get clean
+
+# PlantUMLのインストール
+RUN curl -o /usr/local/bin/plantuml.jar http://sourceforge.net/projects/plantuml/files/plantuml.jar/download
+
+# PlantUMLの実行用のシェルスクリプトを作成
+RUN echo -e '#!/bin/bash\n\njava -jar /usr/local/bin/plantuml.jar "$@"' > /usr/local/bin/plantuml && \
+    chmod +x /usr/local/bin/plantuml
 
 # code-serverの最新バージョンをインストール
 RUN curl -fsSL https://code-server.dev/install.sh | sh
