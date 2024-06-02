@@ -24,7 +24,18 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh
 # 拡張機能のインストール
 RUN code-server --install-extension vscjava.vscode-java-pack && \
     code-server --install-extension jebbs.plantuml
-    
+
+# Markdown Preview Enhancedのインストール
+RUN code-server --install-extension shd101wyy.markdown-preview-enhanced
+RUN code-server --install-extension asciidoctor.asciidoctor-vscode
+
+# PasteImageのインストール
+RUN code-server --install-extension mushan.vscode-paste-image
+
+# AsciidoctorとAsciidoctor-PlantUMLのインストール
+RUN apt-get install -y ruby
+RUN gem install asciidoctor asciidoctor-diagram
+
 # ワークディレクトリを作成
 RUN mkdir -p /home/coder/project
 

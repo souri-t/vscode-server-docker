@@ -1,0 +1,6 @@
+{
+    "markdown-preview-enhanced.enablePlantUML": true,
+    "asciidoc.extensions.enableKroki": true,
+    "markdown-preview-enhanced.krokiServer": "",
+    "explorer.confirmDragAndDrop": false
+}

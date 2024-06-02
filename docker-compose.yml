@@ -6,6 +6,7 @@ services:
       - "8080:8080"
     volumes:
       - ./workspace:/home/coder/project
+      - ./settings.json:/root/.local/share/code-server/User/settings.json
     environment:
       - PASSWORD=your_password_here
     container_name: vscode-server
