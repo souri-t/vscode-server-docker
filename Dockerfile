@@ -34,7 +34,14 @@ RUN code-server --install-extension mushan.vscode-paste-image
 
 # AsciidoctorとAsciidoctor-PlantUMLのインストール
 RUN apt-get install -y ruby
-RUN gem install asciidoctor asciidoctor-diagram
+RUN gem install asciidoctor asciidoctor-diagram asciidoctor-pdf
+
+# Node.jsとnpmのインストール
+RUN apt-get install -y npm
+
+WORKDIR /home/coder
+COPY package.json /home/coder
+RUN npm install 
 
 # ワークディレクトリを作成
 RUN mkdir -p /home/coder/project
