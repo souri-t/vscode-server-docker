@@ -32,6 +32,9 @@ RUN code-server --install-extension asciidoctor.asciidoctor-vscode
 # PasteImageのインストール
 RUN code-server --install-extension mushan.vscode-paste-image
 
+# Draw.io Integrationのインストール
+RUN code-server --install-extension hediet.vscode-drawio
+
 # AsciidoctorとAsciidoctor-PlantUMLのインストール
 RUN apt-get install -y ruby
 RUN gem install asciidoctor asciidoctor-diagram asciidoctor-pdf

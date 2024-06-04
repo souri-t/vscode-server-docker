@@ -26,8 +26,10 @@
     "textlint-rule-use-si-units": "^2.0.0"
   },
   "scripts": {
-    "build": "asciidoctor -r asciidoctor-pdf -r asciidoctor-diagram -b pdf -o output/requirement.pdf requirement.adoc",
-    "build.html": "asciidoctor -r asciidoctor-diagram -o output/requirement.html requirement.adoc",
-    "build.pdf": "asciidoctor -r asciidoctor-pdf -r asciidoctor-diagram -b pdf -o output/requirement.pdf requirement.adoc"
+    "build": "asciidoctor -a stylesheet=style.css -r asciidoctor-pdf -r asciidoctor-diagram -b pdf -o output/document.pdf project/document.adoc",
+    "build.simple": "asciidoctor -a stylesheet=style.css -o output/document.html project/document.adoc",
+    "build.html": "asciidoctor -a stylesheet=style.css -r asciidoctor-diagram -o output/archive/document.html project/document.adoc && zip -qr output/archive.zip output/archive/ && rm -rf output/archive",
+    "build.pdf": "asciidoctor -a stylesheet=style.css -r asciidoctor-pdf -r asciidoctor-diagram -b pdf -o output/document.pdf project/document.adoc",
+    "lint": "npx textlint project/document.adoc"
   }
 }
