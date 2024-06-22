@@ -47,10 +47,10 @@ COPY package.json /home/coder
 RUN npm install 
 
 # ワークディレクトリを作成
-RUN mkdir -p /home/coder/project
+RUN mkdir -p /home/coder/workspace
 
 # ポート8080を公開
 EXPOSE 8080
 
 # コンテナ起動時に実行するコマンド
-CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "password", "/home/coder/project"]
+CMD ["code-server", "--bind-addr", "0.0.0.0:8080", "--auth", "password", "/home/coder/workspace"]

@@ -5,9 +5,9 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./workspace:/home/coder/project
+      - ./workspace:/home/coder/workspace
       - ./settings.json:/root/.local/share/code-server/User/settings.json
       - ./.textlintrc.json:/home/coder/.textlintrc.json
     environment:
-      - PASSWORD=your_password_here
+      - PASSWORD=password
     container_name: vscode-server

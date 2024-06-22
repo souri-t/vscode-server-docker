@@ -1,69 +1,69 @@
 :table-caption: Table
 :figure-caption: Figure
 
-= Requirements definition of Tech Blog System - Version 1.0 - 2022-04-21
+= システムの要件定義 - バージョン 1.0 - 2022年4月21日
 
 [.cover-project]
-Tech Blog System:
+システム:
 
 [.cover-document]
-Requirements Definition
+要件定義
 
 [.cover-version]
-Version 1.0
+バージョン 1.0
 
 [.cover-date]
-April 21st, 2022
+2022年4月21日
 
 [.cover-company]
-Lorem Ipsum Co. Ltd.
+株式会社サンプル
 
 [.cover-address]
-4-3934, Sekihara minami, Nagaoka city, Niigata prefecture, Japan.
+〒100-0000 東京都千代田区千代田1-1-1
 
 [.cover-tel]
-TEL: +81-258-94-5233
+TEL: +81-3-1234-5678
 
 [.cover-email]
-E-mail: sales@exmaple.com
+E-mail: sales@example.com
 
 
 
-== Purpose and structure
+== 目的と構造
 
-The purpose of this document is to build consensus between the outsourcer and the outsourcee of this system development by defining the functional requirements of the system. The structure of this document is shown below.
+このドキュメントの目的は、システムの機能要件を定義することにより、システム開発の発注者と受託者の間で合意形成を図ることです。このドキュメントの構造は以下の通りです。
 
-. Purpose and structure
-. List of pages
-. Page layout
-. Top page
-. Article list page
-. Article detail page
-. Revision history
-
-
-
-== List of pages
-
-. Article list page
-. Article detail Page
+. 目的と構造
+. ページの一覧
+. ページのレイアウト
+. トップページ
+. 記事一覧ページ
+. 記事詳細ページ
+. 改訂履歴
 
 
 
-== Page layout
+== ページの一覧
 
-=== Content
+. 記事一覧ページ
+. 記事詳細ページ
 
-. Header
-.. Logo link
-. Breadcrumb
-. Main content
-. Footer
-.. Copyright
 
-=== Behavior
 
-. When the user clicks the logo link, the system displays the top page.
+== ページのレイアウト
+
+=== コンテンツ
+
+. ヘッダー
+.. ロゴリンク
+. パンくずリスト
+. メインコンテンツ
+. フッター
+.. 著作権表示
+
+=== 動作
+
+. ユーザーがロゴリンクをクリックすると、システムはトップページを表示します。
 
 [plantuml]
 ----
@@ -76,67 +76,51 @@ class Cat extends Animal {
 ----
 
 
-== Article list page
+== 記事一覧ページ
 
-=== Content
+=== コンテンツ
 
-. Main content
-.. List navigation
-... Article links
-.... Posted date
-.... Title
+. メインコンテンツ
+.. リストナビゲーション
+... 記事リンク
+.... 投稿日
+.... タイトル
 
-=== Behavior
+=== 動作
 
-. When the user clicks an article link, the system displays the article detail page.
-
-
-== Article detail page
-
-=== Content
-
-. Main content
-.. Menu
-... Back link
-.. Title
-.. Posted date
-.. Text
-.. Related posts navigation
-... Article links
-.... Posted date
-.... Title
-
-=== Behavior
-
-. When the user clicks the back link, the system displays the article list page.
-. When the user clicks an article link, the system displays the article detail page.
+. ユーザーが記事リンクをクリックすると、システムは記事詳細ページを表示します。
 
 
+== 記事詳細ページ
 
-== Revision history
+=== コンテンツ
 
-The revision history of this document is shown in the table below.
+. メインコンテンツ
+.. メニュー
+... 戻るリンク
+.. タイトル
+.. 投稿日
+.. テキスト
+.. 関連記事ナビゲーション
+... 記事リンク
+.... 投稿日
+.... タイトル
 
-.Revision history
+=== 動作
+
+. ユーザーが戻るリンクをクリックすると、システムは記事一覧ページを表示します。
+. ユーザーが記事リンクをクリックすると、システムは記事詳細ページを表示します。
+
+
+
+== 改訂履歴
+
+このドキュメントの改訂履歴は以下の表に示されています。
+
+.改訂履歴
 [cols="1,3,3,2"]
 |===
-| Version | Date | Comment | Author
+| バージョン | 日付 | コメント | 作成者
 
-| 1.0 | April 21st, 2022 | The first edition | T. Susukida
+| 1.0 | 2022年4月21日 | 初版 | T. Susukida
 |===
-
-
-== Further
-
-text
-
-[plantuml]
-----
-@startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
-@enduml
-----
