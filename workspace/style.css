@@ -59,27 +59,33 @@
     border-bottom: 1pt solid black;
     font-size: 18pt;
     margin: 0;
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
   
   h3 {
-    font-weight: normal;
+    font-weight: bold;
     font-size: 14pt;
     margin: 0;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: 0.5rem;
   }
   
   h4 {
-    font-weight: normal;
+    font-weight: bold;
     font-size: 12pt;
     margin: 0;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: 1.0rem;
   }
   
   p {
     margin: 0;
     margin-bottom: 1rem;
     padding: 0;
+    margin-left: 1.0rem;
   }
   
   .olist ol {
@@ -274,12 +280,10 @@
     text-decoration: none;
   }
 
-  img {
-    border: 1pt solid black;
-  }
-  
   .imageblock {
     text-align: center;
+    border: 1pt solid black;
+    padding: 4px;
   }
   
   .imageblock .title {

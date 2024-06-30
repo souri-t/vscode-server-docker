@@ -26,9 +26,8 @@
     "textlint-rule-use-si-units": "^2.0.0"
   },
   "scripts": {
-    "build.html": "asciidoctor -a stylesheet=style.css -r asciidoctor-diagram -o workspace/output/document.html workspace/document.adoc",
-    "build.pdf": "asciidoctor -a stylesheet=style.css -r asciidoctor-pdf -r asciidoctor-diagram -b pdf -o workspace/output/document.pdf workspace/document.adoc",
-    "lint": "npx textlint --config ./.textlintrc.json workspace/document.adoc ",
+    "build.html": "asciidoctor -a stylesheet=style.css -r asciidoctor-diagram -o workspace/output/index.html workspace/index.adoc",
+    "lint": "npx textlint --config ./.textlintrc.json workspace/index.adoc ",
     "output.delete": "rm -rf workspace/output/ && mkdir workspace/output"
   }
 }
